@@ -1,0 +1,391 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: white;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* .nav-list{
+    display: none;
+} */
+nav ul li {
+    list-style: none;
+    margin: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    /* better fonts for list */
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Lato', sans-serif; */
+}
+
+.logo {
+    font-weight: bold;
+}
+
+/* Hero section styles */
+.hero {
+    min-height: 550px;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    padding: 50px 20px;
+    display: flex;
+    /* if you remove this display flex property from this hero then The .hero-section will no longer have the automatic horizontal alignment provided by Flexbox. Instead, the .hero-section will take up the full width of its container
+    , the image and text content will no longer be aligned side by side  The .hero-section and its content might stretch to the full width of the .hero container.  */
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    /* width: 90%; */
+    /* margin: 0 auto; */
+    /* this margin wont work here as auto because if u want then specify width okay  but its not appropraiate because The .hero section itself is a block-level element that typically spans the full width of its parent container (in this case, the body element).  */
+}
+
+.hero-section {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    /* text-align: center; */
+
+}
+
+.text-content h3 {
+    color: rgb(243, 243, 243);
+    letter-spacing: 3px;
+}
+
+h1 {
+    /* font-size: 40px; */
+    font-size: 3rem;
+    font-family: 'Merriweather', serif;
+    /* font-family: 'Playfair Display',serif; */
+    margin-bottom: 10px;
+}
+
+.curiousexplore {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Raleway',sans-serif; */
+}
+
+p {
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    margin-top: 29px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    border: 1px solid pink;
+    color: white;
+    background-image: linear-gradient(to top, #c71d6f 0%, #d09693 100%);
+    cursor: pointer;
+}
+
+.image-wrapper {
+    margin-top: 20px;
+    height: 290px;
+    width: 290px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    background-image: linear-gradient(to top, #ca729d 0%, #d09693 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 90px; 
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Passion section styles */
+.passion {
+    padding: 50px 20px;
+    width: 100%;
+}
+
+.mypassion {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 20px; */
+    margin-bottom: 40px;
+    font-size: 2rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+
+.passion-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px; 
+}
+
+.passion-card {
+    border: 1px solid pink;
+    border-radius: 20px;
+    padding: 40px;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#read {
+    background: linear-gradient(to right, rgb(61, 57, 57), rgba(9, 1, 1, 0.171)), url(./Images/pexels-thought-catalog-317580-2228580.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#code {
+    background: linear-gradient(to right, rgb(57, 52, 52), rgba(0, 0, 0, 0.5)), url(./Images/pexels-goumbik-574077.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cook {
+    background: linear-gradient(to right, rgb(57, 49, 49), rgba(9, 6, 6, 0.5)), url(./Images/dish-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#journal {
+    background: linear-gradient(to right, rgb(56, 47, 47), rgba(0, 0, 0, 0)), url(./Images/pexels-roman-odintsov-8180719.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 20px;
+    border: 1px solid pink;
+    color: white;
+    background-image: linear-gradient(45deg, #874da2 0%, #c43a30 100%);
+    /* margin-top: auto; */
+    /* This will align the button to the bottom of the card */
+    /* display: block;
+    width: 100%; */
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    /* font-size: 1.5rem; */
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.paras {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    line-height: 1.5;
+}
+
+/* Newsletter section styles */
+.newsletter {
+    background-image: linear-gradient(to top, #3b41c5 0%, #a981bb 49%, #ffc8a9 100%);
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-section {
+    max-width: 600px;
+    background-color: rgba(10, 9, 9, 0.527);
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    border-radius: 7px;
+}
+
+.newstitle {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-family: serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+#search {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.intro {
+    font-family: 'Verdana', sans-serif;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.subscribe {
+    background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%);
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+
+/* Footer styles */
+footer {
+    font-size: 18px;
+    padding: 30px;
+    width: 100%;
+    background-color: #282828;
+    color: white;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-weight: 500;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 18px;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+span {
+    color: #b43072;
+}
+
+.gradient-txt {
+    background: linear-gradient(to right, #874da2, #995a56);
+    /* background: linear-gradient(to right, #0d73d9 , #189e6b); Blue to cyan-green gradient */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.blue-txt {
+    color: #4e86bd;
+    /* Keeps the text in the original blue color */
+}
+
+/* Navbar */
+#menu-icon {
+    display: none; /* Hide by default */
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media(max-width:768px){
+    #nav-list{
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.9); /* Background for mobile menu */
+        position: absolute; /* Position it over other content */
+        top: 60px; /* Adjust to align with header */
+        right: 0;
+        width: 100%; /* Full-width menu */
+    }
+    #menu-icon{
+        display: block; /* Show the menu icon */
+
+    }
+    nav ul li {
+        text-align: center; /* Center text in mobile menu */
+        padding: 15px 0; /* Add padding for better spacing */
+        margin: 0; /* Remove margin */
+    }
+
+    nav ul li span, nav ul li {
+        color: white; /* Ensure visibility */
+    }
+    
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.text-content h1{
+    font-size: 2rem;
+
+}
+.text-content h2.curiousexplore{
+    font-size: 1.2rem;
+}
+.image-wrapper{
+    margin: 20px auto 0 auto; /* Center the image */
+    height: 250px;  /* Reduce image size */
+    width: 250px;
+}
+}
+
+/* Adjust layout for medium screens */
+@media(min-width:769px){
+    .hero-section{
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+
+    }
+    .text-content{
+        max-width: 50%; /* Limit text width */
+    }
+    .image-wrapper{
+        margin-left: 50px;
+    }
+
+}
